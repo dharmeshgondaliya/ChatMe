@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/FragmentHome">
+
+    <fragment
+        android:id="@+id/FragmentHome"
+        android:name="com.example.chatme.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/home_to_message"
+            app:destination="@id/FragmentMessage" />
+        <action
+            android:id="@+id/home_to_image"
+            app:destination="@id/ImageFragment" />
+        <action
+            android:id="@+id/home_to_profile"
+            app:destination="@id/FragmentUserProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentUsers"
+        android:name="com.example.chatme.fragments.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/user_to_userprofile"
+            app:destination="@id/FragmentUserProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentNotification"
+        android:name="com.example.chatme.fragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/notification_to_profile"
+            app:destination="@id/FragmentUserProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentProfile"
+        android:name="com.example.chatme.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/profile_to_myfriends"
+            app:destination="@id/MyFriendsFragment" />
+        <action
+            android:id="@+id/myprofile_to_image"
+            app:destination="@id/ImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentMessage"
+        android:name="com.example.chatme.fragments.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" >
+        <action
+            android:id="@+id/message_to_home"
+            app:destination="@id/FragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentUserProfile"
+        android:name="com.example.chatme.fragments.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile">
+        <action
+            android:id="@+id/userprofile_to_user"
+            app:destination="@id/FragmentUsers" />
+        <action
+            android:id="@+id/profile_to_home"
+            app:destination="@id/FragmentHome" />
+        <action
+            android:id="@+id/profile_to_notification"
+            app:destination="@id/FragmentNotification" />
+        <action
+            android:id="@+id/userprofile_to_myfriends"
+            app:destination="@id/MyFriendsFragment" />
+        <action
+            android:id="@+id/userprofile_to_image"
+            app:destination="@id/ImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MyFriendsFragment"
+        android:name="com.example.chatme.fragments.MyFriendsFragment"
+        android:label="fragment_my_friends"
+        tools:layout="@layout/fragment_my_friends" >
+        <action
+            android:id="@+id/myfriends_to_profile"
+            app:destination="@id/FragmentProfile" />
+        <action
+            android:id="@+id/myfriends_to_userprofile"
+            app:destination="@id/FragmentUserProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/ImageFragment"
+        android:name="com.example.chatme.fragments.ShowImageFragment"
+        android:label="fragment_show_image"
+        tools:layout="@layout/fragment_show_image" >
+        <action
+            android:id="@+id/image_to_home"
+            app:destination="@id/FragmentHome" />
+    </fragment>
+</navigation>

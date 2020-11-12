@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="registermodel"
+            type="com.example.chatme.RegisterViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterActivity"
+        android:padding="35dp"
+        android:background="@drawable/background_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/loginlogo"
+                android:text="ChatMe"
+                android:gravity="center_horizontal"
+                android:textSize="35sp"
+                android:textStyle="italic|bold"
+                android:textColor="#673AB7"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/login_boy"
+                android:src="@drawable/ic_boy"
+                android:background="@drawable/user_profile_image_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="75dp"
+                android:elevation="5dp"
+                android:padding="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loginlogo"
+                android:layout_marginTop="75dp"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@drawable/box_background">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userlogintext"
+                    android:text="User Login"
+                    android:gravity="center_horizontal"
+                    android:textSize="25sp"
+                    android:textStyle="bold|italic"
+                    android:layout_marginTop="50dp"/>
+
+                <EditText
+                    android:text="@={registermodel.name}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/register_name"
+                    android:hint="Enter Name"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:textStyle="italic"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:text="@={registermodel.email}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/register_email"
+                    android:hint="Enter Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textStyle="italic"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:text="@={registermodel.password}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/register_password"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textStyle="italic"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"/>
+
+                <Button
+                    android:onClick="@{registermodel::RegisterButtonClick}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/register_button"
+                    android:text="Register"
+                    android:textStyle="bold|italic"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/form_button"
+                    android:textColor="#fff"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        android:id="@+id/login_text"
+                        android:textSize="18sp"
+                        android:textStyle="italic|bold"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#3F51B5"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/register_progress"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+</RelativeLayout>
+</layout>

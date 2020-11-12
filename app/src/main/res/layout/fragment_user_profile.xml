@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.UserProfileFragment"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:id="@+id/user_profile_toolbar"
+        android:background="@drawable/toolbar_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/user_back"
+                android:src="@drawable/ic_back"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="10dp"
+                android:padding="7dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/profile_toolbar"
+                android:text="ChatMe"
+                android:gravity="center_vertical"
+                android:textSize="25sp"
+                android:textStyle="bold|italic"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5.5"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/user_profile_image"
+                android:src="@drawable/ic_boy"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_profile_name"
+                android:text="Name"
+                android:textStyle="italic"
+                android:gravity="center_horizontal"
+                android:textSize="25sp"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Posts"
+                    android:textSize="22sp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="italic"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Friends"
+                    android:textSize="22sp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/user_total_posts"
+                    android:text="0"
+                    android:textSize="22sp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="italic"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/user_total_friend"
+                    android:text="0"
+                    android:textSize="22sp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="10dp"
+                android:id="@+id/user_profile_buttons"
+                android:visibility="gone">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/profile_friend_button"
+                    android:text="Friend"
+                    android:background="@drawable/profile_button"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:textStyle="italic"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"/>
+
+                <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/profile_message_button"
+                android:text="Message"
+                android:background="@drawable/profile_button"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:textStyle="italic"
+                android:textAllCaps="false"
+                android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.5"
+            android:id="@+id/user_profile_posts"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/user_profile_gridview"
+                android:numColumns="3"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

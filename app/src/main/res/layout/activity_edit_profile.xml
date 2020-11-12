@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="@drawable/toolbar_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:id="@+id/edit_back"
+                android:src="@drawable/ic_back"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="-8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/notification_toolbar"
+                android:text="ChatMe"
+                android:gravity="center_vertical"
+                android:textSize="25sp"
+                android:textStyle="bold|italic"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.2">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8.2"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/edit_profile_image"
+            android:src="@drawable/ic_boy"/>
+
+        <ProgressBar
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/edit_profile_progress"
+            android:visibility="gone"/>
+
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_name"
+            android:hint="Enter Your Name"
+            android:layout_marginTop="25dp"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            android:inputType="textPersonName"
+            android:padding="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_email"
+            android:hint="Enter Your Email"
+            android:layout_marginTop="10dp"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:editable="false"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_password"
+            android:hint="Change Password"
+            android:layout_marginTop="10dp"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            android:inputType="textPassword"
+            android:padding="15dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_profile_button"
+            android:text="Save"
+            android:textStyle="italic|bold"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/request_button_1"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_profile_logout"
+            android:text="Logout"
+            android:textStyle="italic|bold"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:layout_gravity="bottom"
+            android:background="@drawable/request_button_1"/>
+
+    </LinearLayout>
+
+</LinearLayout>
